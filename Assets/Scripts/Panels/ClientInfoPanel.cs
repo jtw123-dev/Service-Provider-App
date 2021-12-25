@@ -10,6 +10,10 @@ public class ClientInfoPanel : MonoBehaviour
 
     public void ProcessInfo()
     {
-
+         
+    }
+    public void NewCase()
+    {
+        caseNumberText.text = "CASE NUMBER: " + UIManager.Instance.randomCaseID.caseID.ToString();
     }
 }
