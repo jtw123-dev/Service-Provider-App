@@ -297,6 +297,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 137424524}
+        m_TargetAssemblyTypeName: ClientInfoPanel, Assembly-CSharp
+        m_MethodName: ProcessInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &16508413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,8 +381,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 69, y: -76}
-  m_SizeDelta: {x: -138, y: -1175.4}
+  m_AnchoredPosition: {x: -177.6369, y: 30.958}
+  m_SizeDelta: {x: -631.2738, y: -1389.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &49201402
 MonoBehaviour:
@@ -386,7 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -637,6 +649,7 @@ MonoBehaviour:
   caseNumberText: {fileID: 1348929845}
   firstName: {fileID: 1736981656}
   lastName: {fileID: 566992525}
+  locationPanel: {fileID: 1598426385}
 --- !u!1 &202240117
 GameObject:
   m_ObjectHideFlags: 0
@@ -4391,6 +4404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   photoTaken: {fileID: 766649501}
   photoNotes: {fileID: 1063979727}
+  caseNumberTitle: {fileID: 1006170387}
 --- !u!1 &1184384655
 GameObject:
   m_ObjectHideFlags: 0
@@ -4548,8 +4562,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9, y: -260}
-  m_SizeDelta: {x: -400, y: -502}
+  m_AnchoredPosition: {x: -9, y: -334.77356}
+  m_SizeDelta: {x: -400, y: -1312.7036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203152711
 MonoBehaviour:
@@ -4599,6 +4613,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1598426388}
+        m_TargetAssemblyTypeName: LocationPanel, Assembly-CSharp
+        m_MethodName: ProcessInfo
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6253,6 +6279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 1360948699}
   mapNotes: {fileID: 1225336354}
+  caseNumberTitle: {fileID: 1488807935}
 --- !u!1 &1658416152
 GameObject:
   m_ObjectHideFlags: 0
@@ -6495,8 +6522,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9, y: -260}
-  m_SizeDelta: {x: -400, y: -502}
+  m_AnchoredPosition: {x: -9, y: -373}
+  m_SizeDelta: {x: -400, y: -1280.0145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1675911888
 MonoBehaviour:
@@ -6542,7 +6569,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1473678133}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -6919,8 +6946,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 69, y: -120}
-  m_SizeDelta: {x: -138, y: -1175.4}
+  m_AnchoredPosition: {x: -35.498993, y: -82.772705}
+  m_SizeDelta: {x: -347, y: -1297.9314}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1750476708
 MonoBehaviour:
@@ -8513,11 +8540,3 @@ MonoBehaviour:
     locationNotes: dfsdf
     photoTaken: {fileID: 0}
     photoNotes: sdfs
-  randomCaseID:
-    caseID: 
-    nameOfClient: 
-    date: 
-    location: 
-    locationNotes: 
-    photoTaken: {fileID: 0}
-    photoNotes: 

@@ -22,12 +22,12 @@ public class UIManager : MonoBehaviour
         _instance = this;
     }
     public Case activeCase;
-    public Case randomCaseID;
+    //public Case randomCaseID;
     public void CreateNewCase()
     {
         activeCase = new Case();
-       
-        randomCaseID.caseID = Random.Range(0, 1000).ToString();
-        activeCase = randomCaseID;
+        activeCase.caseID = Random.Range(0, 1000).ToString();
+       // randomCaseID.caseID = Random.Range(0, 1000).ToString();
+       // activeCase = randomCaseID;
     }
 }
