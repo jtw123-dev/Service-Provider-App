@@ -11,6 +11,6 @@ public class Case
     public string date;
     public string location;
     public string locationNotes;
-    public RawImage photoTaken;
+    public Texture photoTaken;
     public string photoNotes;
 }
