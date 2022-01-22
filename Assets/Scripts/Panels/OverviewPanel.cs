@@ -20,8 +20,13 @@ public class OverviewPanel : MonoBehaviour
         nameTitle.text = UIManager.Instance.activeCase.nameOfClient;
         dateTitle.text = DateTime.Today.ToString();
         locationNotes.text = "LOCATION NOTES: \n " + UIManager.Instance.activeCase.locationNotes;
+
+        Texture2D reconstructedImage = new Texture2D(1, 1);
+        reconstructedImage.LoadImage(UIManager.Instance.activeCase.photoTaken);
+        Texture img = reconstructedImage;
+
+        photoTaken.texture = img;
         photoNotes.text = "PHOTO NOTES \n" + UIManager.Instance.activeCase.photoNotes;
-        photoTaken.texture = UIManager.Instance.activeCase.photoTaken;
     }
 
     public void ProcessInfo ()

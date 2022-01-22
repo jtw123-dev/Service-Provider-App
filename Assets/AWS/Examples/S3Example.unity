@@ -794,7 +794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa7de8866404054591507da4f1293de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IdentityPoolId: 
+  IdentityPoolId: https://drive.google.com/file/d/125f2PWOf3ngs75p2sgLMloBznR8ugW5M/view?usp=drivesdk
   CognitoIdentityRegion: us-east-1
   S3Region: us-east-1
   S3BucketName: s3-sample-bucket

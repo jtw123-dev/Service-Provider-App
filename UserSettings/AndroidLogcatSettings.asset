@@ -1,23 +1,83 @@
 {
     "m_SelectedDeviceId": "ZY323F623B",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "ZY323F623B",
+        "name": "com.DefaultCompany.ServiceProviderApp",
+        "processId": 6037,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "ZY323F623B",
-            "name": "com.motorola.launcher3",
-            "processId": 2623,
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 2732,
+            "exited": true
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 12064,
+            "exited": true
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 12520,
+            "exited": true
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 13548,
+            "exited": true
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 31286,
+            "exited": true
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 32019,
             "exited": false
         },
         {
             "deviceId": "ZY323F623B",
-            "name": "com.android.settings",
-            "processId": 2277,
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 4860,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 9127,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 14524,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 16534,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 20045,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 6037,
             "exited": false
         }
     ],

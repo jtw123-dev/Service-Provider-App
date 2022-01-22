@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 public class UIManager : MonoBehaviour
 {
@@ -9,7 +11,7 @@ public class UIManager : MonoBehaviour
     {
         get
         {
-            if (_instance != null)
+            if (_instance == null)
             {
                 Debug.Log("_instance is null");
             }
@@ -22,12 +24,32 @@ public class UIManager : MonoBehaviour
         _instance = this;
     }
     public Case activeCase;
-    //public Case randomCaseID;
+
     public void CreateNewCase()
     {
         activeCase = new Case();
         activeCase.caseID = Random.Range(0, 1000).ToString();
-       // randomCaseID.caseID = Random.Range(0, 1000).ToString();
-       // activeCase = randomCaseID;
+    }
+
+    public void SubmitButton()
+    {
+        Case awsCase = new Case();
+        awsCase.caseID = activeCase.caseID;
+        awsCase.nameOfClient = activeCase.nameOfClient;
+        awsCase.date = activeCase.date;
+        awsCase.locationNotes = activeCase.locationNotes;
+        awsCase.photoTaken = activeCase.photoTaken;
+        awsCase.photoNotes = activeCase.photoNotes;
+
+        BinaryFormatter bf = new BinaryFormatter();
+        string filePath = Application.persistentDataPath + "/case # " + awsCase.caseID + ".dat";
+
+        FileStream file = File.Create(filePath);
+        bf.Serialize(file, awsCase);
+        file.Close();
+
+        Debug.Log("Application Data Path: " + Application.persistentDataPath);
+
+        AWSManager.Instance.UploadToS3(filePath, awsCase.caseID );
     }
 }

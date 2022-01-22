@@ -12,6 +12,8 @@ public class TakePhotoPanel : MonoBehaviour
     public Text caseNumberTitle;
 	public GameObject overViewPanel;
 
+	private string _imgPath;
+
     public  void TakePictureButton()
     {
 		TakePicture(512);
@@ -24,7 +26,17 @@ public class TakePhotoPanel : MonoBehaviour
 
     public void ProcessInfo()
     {
-		UIManager.Instance.activeCase.photoTaken = photoTaken.texture;
+		byte[] imgData = null;
+
+
+		if (string.IsNullOrEmpty(_imgPath) ==false)
+        {
+			Texture2D img = NativeCamera.LoadImageAtPath(_imgPath, 512, false);
+		    imgData = img.EncodeToPNG();
+		}
+		
+		
+		UIManager.Instance.activeCase.photoTaken = imgData;
 		UIManager.Instance.activeCase.photoNotes = photoNotes.text;
 		overViewPanel.SetActive(true);
     }
@@ -37,16 +49,15 @@ public class TakePhotoPanel : MonoBehaviour
 			if (path != null)
 			{
 				// Create a Texture2D from the captured image
-				Texture2D texture = NativeCamera.LoadImageAtPath(path, maxSize);
+				Texture2D texture = NativeCamera.LoadImageAtPath(path, maxSize,false);
 				if (texture == null)
 				{
 					Debug.Log("Couldn't load texture from " + path);
 					return;
 				}
-
 				photoTaken.texture = texture;
 				photoTaken.gameObject.SetActive(true);
-
+				_imgPath = path;
 			}
 		}, maxSize);
 

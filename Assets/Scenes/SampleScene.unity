@@ -1573,7 +1573,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &430569403
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1590,7 +1590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -215}
+  m_AnchoredPosition: {x: 0, y: -173}
   m_SizeDelta: {x: -200, y: -1084.854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &430569404
@@ -2675,7 +2675,7 @@ GameObject:
   - component: {fileID: 628989603}
   - component: {fileID: 628989602}
   m_Layer: 5
-  m_Name: Back_Button
+  m_Name: Submit_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2744,7 +2744,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 628989603}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127209308}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SubmitButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &628989603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2891,6 +2903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c0e1802c5cd224f9c039a7cab47ca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  S3Region: ca-central-1
 --- !u!4 &722913932
 Transform:
   m_ObjectHideFlags: 0
@@ -5669,7 +5682,7 @@ RectTransform:
   m_Father: {fileID: 210415278}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.2421714}
+  m_AnchorMin: {x: 0, y: 0.24190259}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -6150,7 +6163,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1425472083}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.7578286
+  m_Size: 0.7580974
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8465,7 +8478,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: BACK
+  m_Text: SUBMIT
 --- !u!222 &2106194971
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8597,5 +8610,5 @@ MonoBehaviour:
     date: 123123
     location: sdfsdf
     locationNotes: dfsdf
-    photoTaken: {fileID: 0}
+    photoTaken: 00
     photoNotes: sdfs
