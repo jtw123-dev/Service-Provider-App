@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "ZY323F623B",
         "name": "com.DefaultCompany.ServiceProviderApp",
-        "processId": 6037,
+        "processId": 3189,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -78,6 +78,66 @@
             "deviceId": "ZY323F623B",
             "name": "com.DefaultCompany.ServiceProviderApp",
             "processId": 6037,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 22699,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 25338,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 27098,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 28509,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 29241,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 30179,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 31275,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 32093,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 2120,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY323F623B",
+            "name": "com.DefaultCompany.ServiceProviderApp",
+            "processId": 3189,
             "exited": false
         }
     ],

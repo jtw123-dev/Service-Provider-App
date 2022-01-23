@@ -12,6 +12,7 @@ using Amazon.CognitoIdentity;
 using Amazon;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class AWSManager : MonoBehaviour
 {
@@ -87,14 +88,13 @@ public class AWSManager : MonoBehaviour
             Key = "case#" + caseID,
             InputStream = stream,
             CannedACL = S3CannedACL.Private, // now need to make use of the request that was posted
-            Region = _S3Region
-
-          
-
+            Region = _S3Region   
         };
-   
+        
+        Debug.Log("Made request file " + request.Region.ToString() );
         S3Client.PostObjectAsync(request, (responseObj) =>
          {
+             Debug.Log("Inside post object async");
              if (responseObj.Exception == null)
              {
                  Debug.Log("Successfully posted to bucket");
@@ -107,7 +107,7 @@ public class AWSManager : MonoBehaviour
          });
     }
 
-    public void GetList(string caseNumber)
+    public void GetList(string caseNumber, Action onComplete = null)
     {
         string target = "case#" + caseNumber;
 
@@ -120,15 +120,58 @@ public class AWSManager : MonoBehaviour
          {
              if (responseObject.Exception == null)
              {
-                 responseObject.Response.S3Objects.ForEach((obj) =>
+               bool caseFound =  responseObject.Response.S3Objects.Any(obj => obj.Key == target);
+                 
+                 if (caseFound == true)
                  {
-                     Debug.Log(obj.Key);
+                     Debug.Log("Case Found");
+                     S3Client.GetObjectAsync("service-app-case-files-2", target, (responseObj) =>
 
-                     if (target==obj.Key)
-                     {
-                         Debug.Log("Found Case File");
-                     }
-                 });
+                       {
+                           //byte array to store data from file
+                           if (responseObj.Response.ResponseStream !=null)
+                           {
+                               byte[] data = null;
+
+                               //use stream reader to read response data
+                               using (StreamReader reader = new StreamReader(responseObj.Response.ResponseStream))
+                               {
+                                   using (MemoryStream memory = new MemoryStream())
+                                   {
+                                       //populate data with memory stream  data 
+                                       var buffer = new byte[512];
+                                       var bytesRead = default(int);
+
+                                       while ((bytesRead = reader.BaseStream.Read(buffer,0,buffer.Length)) >0)
+                                       {
+                                           memory.Write(buffer, 0, bytesRead);
+
+                                       }
+                                       data = memory.ToArray();
+                                   }
+                               }
+
+                               using (MemoryStream memory = new MemoryStream(data))
+                               {
+                                   BinaryFormatter bf = new BinaryFormatter();
+                                   Case downloadedCase = (Case)bf.Deserialize(memory);
+                                   Debug.Log("Downloaded case name " + downloadedCase.nameOfClient);
+                                   UIManager.Instance.activeCase = downloadedCase;
+                                  
+                                   if (onComplete!=null)
+                                   {
+                                       onComplete();
+                                   }
+                                   
+                                   
+                               }
+                           }
+                       });
+                 }
+                 else
+                 {
+                     Debug.Log("Case not found");
+                 }
              }
              else
              {

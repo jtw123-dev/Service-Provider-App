@@ -812,10 +812,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 950527032}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1206574782}
+        m_TargetAssemblyTypeName: SearchPanel, Assembly-CSharp
+        m_MethodName: ProcessInfo
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4634,7 +4634,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9, y: -334.77356}
+  m_AnchoredPosition: {x: -9, y: -334.77368}
   m_SizeDelta: {x: -400, y: -1312.7036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203152711
@@ -4836,6 +4836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   caseNumberInput: {fileID: 1982850127}
+  selectPanel: {fileID: 950527035}
 --- !u!1 &1225336352
 GameObject:
   m_ObjectHideFlags: 0
